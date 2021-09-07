@@ -1,12 +1,62 @@
 import React from 'react'
-import Header from '../components/Header' 
+import Header from '../components/Header'
+import axios from 'axios'
+import CityModel from '../models/CityModel'
+import SelectDropdown from '../components/SelectDropdown'
 
 class CreatePostShowPage extends React.Component {
+    state = {
+        title: '',
+        content: '',
+        img: '',
+        cities: [],
+    }
+    componentDidMount() {
+
+        CityModel.all().then((data) => {
+            this.setState({ cities: data });
+        });
+    }
+
+
+    handleInputChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value,
+        })
+    }
+    handleSubmit = e => {
+        e.preventDefault();
+        const { title, content, img} = this.state;
+        const city = {
+            title,
+            content,
+            img,
+        }
+        axios
+            .post('http://localhost:4000/post/new', city)
+            .then(() => console.log('Create Check'))
+            .catch(err => {
+                console.error(err)
+            })
+    }
+
     render() {
         return (
             <div>
-                <Header />
                 <h1>Create Post Show Page</h1>
+                <form onSubmit={this.handleSubmit}>
+                    <label htmlFor='title'>Title:</label>
+                    <input type='text' name='title' onChange={this.handleInputChange}></input>
+                    <label htmlFor='content'>Content:</label>
+                    <input type='text' name='content' onChange={this.handleInputChange}></input>
+                    <label htmlFor='img'>Image URL:</label>
+                    <input type='text' name='img' onChange={this.handleInputChange}></input>
+                    <select name='cities'>
+                        <option value='' selected>Select</option>
+                        <SelectDropdown cities={this.state.cities}/>
+                    </select>
+                    <button type='submit'>Create</button>
+                </form>
             </div>
         )
     }
