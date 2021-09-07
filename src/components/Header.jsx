@@ -14,6 +14,9 @@ function Header() {
             <li>
               <Link className="navLink" to="/cities">Cities</Link>
             </li>
+            <li>
+            <Link className="navLink" to="/explore">Explore</Link>
+          </li>
           </ul>
         </nav>
       </header>
