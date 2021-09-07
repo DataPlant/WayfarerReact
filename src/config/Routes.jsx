@@ -10,8 +10,8 @@ function Routes() {
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/cities' component={CityListPage} />
-        <Route path='/cities/:id' render={(props) => <CityShowPage {...props} />} />
         <Route path='/cities/new' component={CreatePostShowPage} />
+        <Route path='/cities/:id' render={(props) => <CityShowPage {...props} />} />
       </Switch>
     );
   }
