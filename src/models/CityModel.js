@@ -1,4 +1,4 @@
-const url = 'http://localhost:4000'
+const url = 'http://localhost:4000/cities'
 
 class CityModel {
    static all() {
