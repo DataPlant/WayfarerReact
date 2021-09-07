@@ -6,12 +6,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styled from 'styled-components'
+import MainPage from './pages/MainPage';
 
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <Switch>
+        <Route path="/explore" component={MainPage} />
+      </Switch>
       <Routes />
     </div>
   );
