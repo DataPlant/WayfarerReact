@@ -1,13 +1,24 @@
 import React from 'react'
 import Header from '../components/Header'
 import axios from 'axios'
+import CityModel from '../models/CityModel'
+import SelectDropdown from '../components/SelectDropdown'
 
 class CreatePostShowPage extends React.Component {
     state = {
         title: '',
         content: '',
         img: '',
+        cities: [],
     }
+    componentDidMount() {
+
+        CityModel.all().then((data) => {
+            this.setState({ cities: data });
+        });
+    }
+
+
     handleInputChange = e => {
         this.setState({
             [e.target.name]: e.target.value,
@@ -40,6 +51,10 @@ class CreatePostShowPage extends React.Component {
                     <input type='text' name='content' onChange={this.handleInputChange}></input>
                     <label htmlFor='img'>Image URL:</label>
                     <input type='text' name='img' onChange={this.handleInputChange}></input>
+                    <select name='cities'>
+                        <option value='' selected>Select</option>
+                        <SelectDropdown cities={this.state.cities}/>
+                    </select>
                     <button type='submit'>Create</button>
                 </form>
             </div>
