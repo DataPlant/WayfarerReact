@@ -1,3 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Vidaloka&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  color: inherit;
+}
+
+button {
+  padding: 6px 8px;
+  margin: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+h1, h2, h3 {
+  font-family: 'Vidaloka', serif;
+}
+
+h2 {
+  font-family: 'Vidaloka', serif;
+
+}
+
+/* SITEWIDE *********************************************** */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #121212;
+
+}
+
+/* HEADER ************************************************* */
+.header {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  color: white;
+  font-family: 'Vidaloka', serif;
+
+}
+
+.navList {
+  display: flex;
+}
+
+.navLink {
+  display: block;
+  padding: 20px;
+}
+
+.navLink:hover {
+  color: gray;
+}
+
+.main-page {
+  display: flex;
+}
+
+
 .city-img {
   width: 400px
 }
