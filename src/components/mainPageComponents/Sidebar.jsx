@@ -1,9 +1,9 @@
 function Sidebar(props) {
     function handleCategoryClick(idx) {
-      props.updateCategoryIdx(idx);
+      props.updateCityIdx(idx);
     }
-  
-    let sidebarCardsJsx = props.categoryNames.map((name, idx) => {
+
+    let sidebarCardsJsx = props.cityNames.map((name, idx) => {
       return (
         <li 
           key={idx} 
@@ -25,4 +25,3 @@ function Sidebar(props) {
   }
   
   export default Sidebar;
-  
