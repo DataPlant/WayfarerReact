@@ -34,6 +34,7 @@ class MainPage extends React.Component {
             return city.cityname
           })
 
+
         let selectedCity = this.state.cities[this.state.cityIdx] 
     
       return (
@@ -50,7 +51,8 @@ class MainPage extends React.Component {
           <section className="category-detail">
             Learn More About...
           </section>
-            <City city={ selectedCity }/>
+            
+            { selectedCity ? <City city={ selectedCity }/> : "" }
           </main>
 
         </div>
