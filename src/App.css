@@ -13,11 +13,11 @@ ul {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: white;
 }
 
 a:visited {
-  color: inherit;
+  color: white;
 }
 
 button {
@@ -237,5 +237,19 @@ h2 {
 .recipe-title,
 .recipe-body {
   margin-bottom: 10px;
+
+}
+
+.button, .link-button {
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121212;
+  color: white;
+  font-family: 'Vidaloka', serif;
+  border: none;
+  font-size: 16px;
+  left: 50px;
 
 }
