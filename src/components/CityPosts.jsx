@@ -1,6 +1,6 @@
 import Posts from './Posts'
 
-function City(props) {
+function CityPosts(props) {
     let postsJsx = props.city.posts.map((post, idx) => {
         return (
             <div>
@@ -13,10 +13,7 @@ function City(props) {
     return (
         <div className="category-detail">
             <div className="category-content">
-              <h2>{props.city.cityname}</h2>
-              <h3>{props.city.country}</h3>
-              <img src={ props.city.headerimg }alt="" className="category-img"/>
-              {/* { postsJsx } */}
+              { postsJsx }
             </div>
                 
         </div>
@@ -24,4 +21,4 @@ function City(props) {
 }
 
 
-export default City
+export default CityPosts
