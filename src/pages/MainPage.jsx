@@ -6,6 +6,7 @@ import PostModel from '../models/PostModel'
 import Sidebar from '../components/mainPageComponents/Sidebar';
 import City from '../components/City';
 import { Link } from 'react-router-dom';
+import CityPosts from '../components/CityPosts';
 
 
 class MainPage extends React.Component {
@@ -41,13 +42,21 @@ class MainPage extends React.Component {
 
     let selectedCity = this.state.cities[this.state.cityIdx]
 
+    let selectedCity2 = this.state.cities[this.state.cityIdx]
+
     let linkJsx = null
+    let postJsx = null
 
     if (selectedCity) {
 
      linkJsx = <Link className="navLink" to={`/about/${this.state.cities[this.state.cityIdx]._id}`}>
         <City city={selectedCity} /> 
       </Link>
+
+
+     postJsx = <Link className="navLink" to={`/about/${this.state.cities[this.state.cityIdx]._id}`}>
+     <CityPosts city={selectedCity2} /> 
+   </Link>
 
     } else {
       linkJsx = ''
@@ -69,6 +78,7 @@ class MainPage extends React.Component {
             <Link className="navLink1" to="/posts/new"><button>+</button></Link>
           </section>
             {linkJsx}
+            {postJsx}
         </main>
 
       </div>
