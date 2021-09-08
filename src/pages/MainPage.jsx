@@ -5,6 +5,7 @@ import CityModel from '../models/CityModel';
 import PostModel from '../models/PostModel'
 import Sidebar from '../components/mainPageComponents/Sidebar';
 import City from '../components/City';
+import { Link } from 'react-router-dom';
 
 
 class MainPage extends React.Component {
@@ -13,14 +14,13 @@ class MainPage extends React.Component {
         cities: [],
         cityIdx: 0,
         posts: [],
-        postIdx: 0,
     }
 
-    updateCityIdx = (idx) => {
-        // Anytime we update state we must call this.setState()
-        // this.setState() will tell the component to rerender.
-        this.setState({ cityIdx: idx });
-      }
+  updateCityIdx = (idx) => {
+    // Anytime we update state we must call this.setState()
+    // this.setState() will tell the component to rerender.
+    this.setState({ cityIdx: idx });
+  }
 
     componentDidMount() {
         console.log('did mount');
@@ -33,40 +33,49 @@ class MainPage extends React.Component {
         })
     }
 
-  
-    render() {
+  render() {
 
-        let cityNames = this.state.cities.map(city => {
-            return city.cityname
-          })
+    let cityNames = this.state.cities.map(city => {
+      return city.cityname
+    })
 
+    let selectedCity = this.state.cities[this.state.cityIdx]
 
-        let selectedCity = this.state.cities[this.state.cityIdx] 
-    
-      return (
-        <div className="main-page">
+    let linkJsx = null
 
-            {/* <CityListPage cities={ this.state.cities } /> */}
+    if (selectedCity) {
 
-            <Sidebar 
-            cityNames = { cityNames }
-            updateCityIdx={ this.updateCityIdx }
-            />
+     linkJsx = <Link className="navLink" to={`/about/${this.state.cities[this.state.cityIdx]._id}`}>
+        <City city={selectedCity} /> 
+      </Link>
 
-          <main className="category-info">
+    } else {
+      linkJsx = ''
+    }
+
+    return (
+      <div className="main-page">
+
+        {/* <CityListPage cities={ this.state.cities } /> */}
+
+        <Sidebar
+          cityNames={cityNames}
+          updateCityIdx={this.updateCityIdx}
+        />
+
+        <main className="category-info">
           <section className="category-detail">
             Learn More About...
           </section>
-            
-            { selectedCity ? <City city={ selectedCity } posts={}/> : "" }
-          </main>
+            {linkJsx}
+        </main>
 
-        </div>
-      );
-    }
+      </div>
+    );
   }
-  
-  export default MainPage;
+}
+
+export default MainPage;
 
   // 2 components:
   //    Sidebar
