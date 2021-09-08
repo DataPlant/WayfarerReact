@@ -24,5 +24,4 @@ function City(props) {
 }
 
 
-
 export default City
