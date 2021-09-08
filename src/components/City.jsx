@@ -16,7 +16,7 @@ function City(props) {
               <h2>{props.city.cityname}</h2>
               <h3>{props.city.country}</h3>
               <img src={ props.city.headerimg }alt="" className="category-img"/>
-              { postsJsx }
+              {/* { postsJsx } */}
             </div>
                 
         </div>
