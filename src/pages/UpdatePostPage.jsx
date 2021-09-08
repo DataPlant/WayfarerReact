@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import CityModel from '../models/CityModel'
 
 class UpdatePost extends React.Component {
     state = {
@@ -7,15 +8,22 @@ class UpdatePost extends React.Component {
         content: '',
         img: '',
         cityId: '',
+        cities: [],
     }
-
     componentDidMount() {
-
         CityModel.all().then((data) => {
             this.setState({ cities: data });
         });
     }
 
+    handleSelectChange = e => {
+        this.setState({
+            cityId: e.target.value,
+        })
+        this.state.cities.find((city) => {
+
+        })
+    }
     handleInputChange = e => {
         this.setState({
             [e.target.name]: e.target.value,
@@ -41,18 +49,18 @@ class UpdatePost extends React.Component {
     render() {
         return (
             <div>
-                <h1>Create Post Show Page</h1>
+                <h1>Update Post Show Page</h1>
                 <form onSubmit={this.handleSubmit}>
+                    <select name='cityId' value={this.state.cityId} onChange={this.handleSelectChange}>
+                        <option value='' selected>Select</option>
+                        <SelectDropdown cities={this.state.cities}/>
+                    </select>
                     <label htmlFor='title'>Title:</label>
                     <input type='text' name='title' onChange={this.handleInputChange}></input>
                     <label htmlFor='content'>Content:</label>
                     <input type='text' name='content' onChange={this.handleInputChange}></input>
                     <label htmlFor='img'>Image URL:</label>
                     <input type='text' name='img' onChange={this.handleInputChange}></input>
-                    <select name='cityId' value={this.state.cityId} onChange={this.handleInputChange}>
-                        <option value='' selected>Select</option>
-                        <SelectDropdown cities={this.state.cities}/>
-                    </select>
                     <button type='submit'>Create</button>
                 </form>
             </div>
