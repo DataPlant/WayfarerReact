@@ -2,16 +2,19 @@ import React from 'react'
 import CityListPage from './CityListPage';
 import CityShowPage from './CityShowPage';
 import CityModel from '../models/CityModel';
+import PostModel from '../models/PostModel'
 import Sidebar from '../components/mainPageComponents/Sidebar';
 import City from '../components/City';
 import { Link } from 'react-router-dom';
 
+
 class MainPage extends React.Component {
 
-  state = {
-    cities: [],
-    cityIdx: 0
-  }
+    state = {
+        cities: [],
+        cityIdx: 0,
+        posts: [],
+    }
 
   updateCityIdx = (idx) => {
     // Anytime we update state we must call this.setState()
@@ -21,18 +24,18 @@ class MainPage extends React.Component {
 
   componentDidMount() {
     console.log('did mount');
-
-    CityModel.all().then((data) => {
-      this.setState({ cities: data });
-      console.log(data);
-
-    });
+        
+    CityModel.all().then((citydata) => {
+      this.setState({ cities: citydata })
+    })
+    PostModel.all().then((postdata) => {
+      this.setState({ posts: postdata })
+    })
   }
-
 
   render() {
 
-    let cityNames = this.state.cities.map(city => {
+    let cityNames = this.state.cities.map((city) => {
       return city.cityname
     })
 
