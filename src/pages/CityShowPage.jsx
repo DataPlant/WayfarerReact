@@ -6,6 +6,7 @@ class CityShowPage extends React.Component {
         cityname: '',
         country: '',
         headerimg: '',
+        posts: []
     }
     
     componentDidMount() {
@@ -20,9 +21,19 @@ class CityShowPage extends React.Component {
                 cityname: data.cityname,
                 country: data.country,
                 headerimg: data.headerimg,
+                posts: data.posts,
             })
         })
 
+    }
+    showPosts() {
+        const getPosts = this.state.posts.map((post) => {
+            return (
+                <div>
+                    {post.title}
+                </div>
+            )
+        })
     }
     
     
@@ -35,7 +46,8 @@ class CityShowPage extends React.Component {
                 className="city-img"
                 src={this.state.headerimg}
                 alt="city picture"
-            />
+                />
+                {this.showPosts()}
             </div>
         )
     }

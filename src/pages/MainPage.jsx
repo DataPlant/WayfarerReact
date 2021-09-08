@@ -2,13 +2,21 @@ import React from 'react'
 import CityListPage from './CityListPage';
 import CityShowPage from './CityShowPage';
 import CityModel from '../models/CityModel';
+import Sidebar from '../components/mainPageComponents/Sidebar';
+import City from '../components/City';
 
 class MainPage extends React.Component {
 
     state = {
         cities: [],
-        posts: []
+        cityIdx: 0
     }
+
+    updateCityIdx = (idx) => {
+        // Anytime we update state we must call this.setState()
+        // this.setState() will tell the component to rerender.
+        this.setState({ cityIdx: idx });
+      }
 
     componentDidMount() {
         console.log('did mount');
@@ -22,12 +30,28 @@ class MainPage extends React.Component {
   
     render() {
 
+        let cityNames = this.state.cities.map(city => {
+            return city.cityname
+          })
 
+        let selectedCity = this.state.cities[this.state.cityIdx] 
     
       return (
         <div className="main-page">
 
-            <CityListPage cities={ this.state.cities } />
+            {/* <CityListPage cities={ this.state.cities } /> */}
+
+            <Sidebar 
+            cityNames = { cityNames }
+            updateCityIdx={ this.updateCityIdx }
+            />
+
+          <main className="category-info">
+          <section className="category-detail">
+            Learn More About...
+          </section>
+            <City city={ selectedCity }/>
+          </main>
 
         </div>
       );
@@ -35,3 +59,7 @@ class MainPage extends React.Component {
   }
   
   export default MainPage;
+
+  // 2 components:
+  //    Sidebar
+  //    CityDetails
