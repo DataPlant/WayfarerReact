@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../components/Header'
 import axios from 'axios'
 import CityModel from '../models/CityModel'
 import SelectDropdown from '../components/SelectDropdown'
