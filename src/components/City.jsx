@@ -15,9 +15,46 @@ function City(props) {
             <div className="category-content">
               <h2>{props.city.cityname}</h2>
               <h3>{props.city.country}</h3>
+              <p className="city-p">
+                  <br></br>
+                Hello young traveller.
+                blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+              blah blah blah
+            
+              </p>
+            </div>
               <img src={ props.city.headerimg }alt="" className="category-img"/>
               {/* { postsJsx } */}
-            </div>
                 
         </div>
     )
