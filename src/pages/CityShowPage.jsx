@@ -30,10 +30,15 @@ class CityShowPage extends React.Component {
         const getPosts = this.state.posts.map((post) => {
             return (
                 <div>
-                    {post.title}
+                    <section>
+                       <h4>{post.title}</h4> 
+                        <img src={post.img}></img>
+                        <p>{post.content}</p>
+                    </section>
                 </div>
             )
         })
+        return getPosts
     }
     
     
