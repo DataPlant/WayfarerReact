@@ -69,10 +69,15 @@ class MainPage extends React.Component {
           cityNames={cityNames}
           updateCityIdx={this.updateCityIdx}
         />
+        
         <main className="category-info">
             {linkJsx}
             <div className="add-post-wrapper">
-            <Link to="/posts/new">Add Post   <button className="add-post">+</button></Link>
+            <Link className="navLink1" to="/posts/new">
+    
+              <p className="add-post-text">Add Post</p>
+              
+              <button className="add-post">+</button></Link>
             </div>
             {postJsx}
         </main>
