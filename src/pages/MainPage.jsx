@@ -2,14 +2,18 @@ import React from 'react'
 import CityListPage from './CityListPage';
 import CityShowPage from './CityShowPage';
 import CityModel from '../models/CityModel';
+import PostModel from '../models/PostModel'
 import Sidebar from '../components/mainPageComponents/Sidebar';
 import City from '../components/City';
+
 
 class MainPage extends React.Component {
 
     state = {
         cities: [],
-        cityIdx: 0
+        cityIdx: 0,
+        posts: [],
+        postIdx: 0,
     }
 
     updateCityIdx = (idx) => {
@@ -21,10 +25,12 @@ class MainPage extends React.Component {
     componentDidMount() {
         console.log('did mount');
         
-        CityModel.all().then((data) => {
-            this.setState({ cities: data });
-
+        CityModel.all().then((citydata) => {
+          this.setState({ cities: citydata });
         });
+        PostModel.all().then((postdata) => {
+          this.setState({posts: postdata})
+        })
     }
 
   
@@ -52,7 +58,7 @@ class MainPage extends React.Component {
             Learn More About...
           </section>
             
-            { selectedCity ? <City city={ selectedCity }/> : "" }
+            { selectedCity ? <City city={ selectedCity } posts={}/> : "" }
           </main>
 
         </div>
