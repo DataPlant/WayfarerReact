@@ -50,7 +50,7 @@ class MainPage extends React.Component {
           <section className="category-detail">
             Learn More About...
           </section>
-            <City city={selectedCity}/>
+            <City city={ selectedCity }/>
           </main>
 
         </div>
