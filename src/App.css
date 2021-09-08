@@ -265,7 +265,7 @@ h2 {
   left: 58%;
   transform: translate(-50%, -50%);
   width: 600px;
-  height:240px;
+  height:250px;
   display: flex;
   border: none;
   text-align: center;
@@ -331,4 +331,18 @@ h2 {
     display: block;
     padding: 20px;
     color:white
+  }
+
+  .add-post {
+    border-radius: 30px;
+    left:0;
+
+  }
+
+  .add-post-wrapper {
+    position: absolute;
+    margin:0;
+    padding:0;
+    right:10px;
+    top:42%
   }
