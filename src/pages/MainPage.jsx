@@ -65,7 +65,8 @@ class MainPage extends React.Component {
 
         <main className="category-info">
           <section className="category-detail">
-            Learn More About...
+            Add New Post
+            <Link className="navLink1" to="/posts/new"><button>+</button></Link>
           </section>
             {linkJsx}
         </main>
