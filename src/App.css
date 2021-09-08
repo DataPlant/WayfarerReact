@@ -67,10 +67,15 @@ h2 {
 .navLink {
   display: block;
   padding: 20px;
+  color:black;
 }
 
 .navLink:hover {
   color: gray;
+}
+
+.navLink:visited {
+  color: black;
 }
 
 .main-page {
@@ -320,4 +325,10 @@ h2 {
   letter-spacing: 0.2px;
   outline: 0;
   transition: all .3s;
+  }
+
+  .navLink1 {
+    display: block;
+    padding: 20px;
+    color:white
   }
