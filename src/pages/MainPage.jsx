@@ -45,6 +45,7 @@ class MainPage extends React.Component {
     let selectedCity2 = this.state.cities[this.state.cityIdx]
 
     let linkJsx = null
+
     let postJsx = null
 
     if (selectedCity) {
@@ -64,20 +65,15 @@ class MainPage extends React.Component {
 
     return (
       <div className="main-page">
-
-        {/* <CityListPage cities={ this.state.cities } /> */}
-
         <Sidebar
           cityNames={cityNames}
           updateCityIdx={this.updateCityIdx}
         />
-
         <main className="category-info">
-          <section className="category-detail">
-            Add New Post
-            <Link className="navLink1" to="/posts/new"><button>+</button></Link>
-          </section>
             {linkJsx}
+            <div className="add-post-wrapper">
+            <Link to="/posts/new">Add Post   <button className="add-post">+</button></Link>
+            </div>
             {postJsx}
         </main>
 
