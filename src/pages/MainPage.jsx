@@ -22,20 +22,20 @@ class MainPage extends React.Component {
     this.setState({ cityIdx: idx });
   }
 
-    componentDidMount() {
-        console.log('did mount');
+  componentDidMount() {
+    console.log('did mount');
         
-        CityModel.all().then((citydata) => {
-          this.setState({ cities: citydata });
-        });
-        PostModel.all().then((postdata) => {
-          this.setState({posts: postdata})
-        })
-    }
+    CityModel.all().then((citydata) => {
+      this.setState({ cities: citydata })
+    })
+    PostModel.all().then((postdata) => {
+      this.setState({ posts: postdata })
+    })
+  }
 
   render() {
 
-    let cityNames = this.state.cities.map(city => {
+    let cityNames = this.state.cities.map((city) => {
       return city.cityname
     })
 
