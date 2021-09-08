@@ -13,9 +13,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Switch>
-        <Route path="/explore" component={MainPage} />
-      </Switch>
       <Routes />
     </div>
   );
