@@ -13,7 +13,7 @@ function Routes() {
         {/* <Route exact path='/allcities' component={CityListPage} /> */}
         <Route path='/cities' component={ MainPage } />
         <Route path='/posts/new' component={CreatePostShowPage} />
-        {/* <Route path='/cities/:id' render={(props) => <CityShowPage {...props} />} /> */}
+        <Route path='/about/:id' render={(props) => <CityShowPage {...props} />} />
       </Switch>
     );
   }
