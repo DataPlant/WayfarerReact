@@ -3,6 +3,7 @@ import CityListPage from './CityListPage';
 import CityShowPage from './CityShowPage';
 import CityModel from '../models/CityModel';
 import Sidebar from '../components/mainPageComponents/Sidebar';
+import City from '../components/City';
 
 class MainPage extends React.Component {
 
@@ -32,6 +33,8 @@ class MainPage extends React.Component {
         let cityNames = this.state.cities.map(city => {
             return city.cityname
           })
+
+        let selectedCity = this.state.cities[this.state.cityIdx] 
     
       return (
         <div className="main-page">
@@ -42,6 +45,13 @@ class MainPage extends React.Component {
             cityNames = { cityNames }
             updateCityIdx={ this.updateCityIdx }
             />
+
+          <main className="category-info">
+          <section className="category-detail">
+            Learn More About...
+          </section>
+            <City city={selectedCity}/>
+          </main>
 
         </div>
       );
