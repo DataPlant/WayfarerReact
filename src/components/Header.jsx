@@ -25,17 +25,14 @@ class Header extends React.Component {
           <nav>
             <ul className="navList">
               <li>
-                <Link className="navLink" to="/">Home</Link>
+                <Link className="navLink1" to="/">Home</Link>
               </li>
               <li>
-                <Link className="navLink" to="/cities">Cities</Link>
+                <Link className="navLink1" to="/cities">Cities</Link>
               </li>
-              <li>
-              <Link className="navLink" to="/explore">Explore</Link>
-            </li>
   
             <li  
-              className="navLink"  
+              className="navLink1"  
               onClick={() => this.isShowPopup(true)}>  
               <button className="button"> Log In</button>  
             </li>  
