@@ -3,20 +3,19 @@ import Posts from './Posts'
 function CityPosts(props) {
     let postsJsx = props.city.posts.map((post, idx) => {
         return (
-            <div>
-                <h2>{post.title}</h2>
-                <p>{post.content}</p>
+        <article className="recipe">
+            <div className="recipe-container">
+                    <h4 className="recipe-title">{post.title}</h4>
+                    <p className="recipe-p">{post.content}</p>
             </div>
+        </article>
         )
         // <Posts post={post} key={idx} />
     })
     return (
-        <div className="category-detail">
-            <div className="category-content">
-              { postsJsx }
-            </div>
-                
-        </div>
+        <section className="recipes-section">
+              { postsJsx }                
+        </section>
     )
 }
 
