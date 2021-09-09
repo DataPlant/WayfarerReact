@@ -9,6 +9,10 @@ background-size:cover;
 background-color:#121212;
 color:white;
 `
+const Div = styled.div `
+background-color:white;
+backdrop-filter: blur(8px);
+`
 
 class ModalPopup extends Component {  
     constructor(props) {  
@@ -21,7 +25,7 @@ class ModalPopup extends Component {
     isShowModal = (status) => {  
         this.handleClose();  
         this.setState({ showModal: status });  
-    }  
+    }   
   
     handleClose = () => {  
         this.props.onPopupClose(false);  
@@ -31,6 +35,9 @@ class ModalPopup extends Component {
   
     render() {  
         return (  
+            <Div>
+
+
                 <Modal 
                 className="Modal" show={this.props.showModalPopup} onHide={this.handleClose}  
                     size="lg"  
@@ -72,6 +79,7 @@ class ModalPopup extends Component {
                     </Modal.Body>  
   
                 </Modal >  
+            </Div>
   
         );  
     }  

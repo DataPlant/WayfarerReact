@@ -4,27 +4,27 @@ import City from '../components/City';
 
 class CityListPage extends React.Component {
 
-    renderCities() {
-        const citiesJSX = this.props.cities.map((cityObj, idx) => {
-            return (
-              <Link to={`/cities/${cityObj._id}`}>
-                <City key={idx} cityObj={cityObj} />
-              </Link>
-            );
-          });
-      
-          return citiesJSX;
-        }
+  renderCities() {
+    const citiesJSX = this.props.cities.map((cityObj, idx) => {
+      return (
+        <Link to={`/cities/${cityObj._id}`}>
+          <City key={idx} cityObj={cityObj} />
+        </Link>
+      );
+    });
 
-    render() {
-        return (
-            <div>
-            
-                {this.renderCities()}
-            </div>
+    return citiesJSX;
+  }
 
-        )
-    }
+  render() {
+    return (
+      <div>
+
+        {this.renderCities()}
+      </div>
+
+    )
+  }
 }
 
 export default CityListPage
