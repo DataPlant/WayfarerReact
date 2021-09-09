@@ -159,12 +159,25 @@ button {
   border-radius: 10px;
   mask-image: linear-gradient(rgba(0,130,170,0),rgba(0,130,170,1));
 }
-
 .show-img {
-  width: 700px;
+  width: 525px;
   max-width: 50%;
   border-radius: 10px;
-  mask-image: linear-gradient(rgba(0,130,170,0),rgba(0,130,170,1));
+  
+}
+
+#show-img {
+  width: 700px;
+  border-radius: 10px;
+  font-size: 30px;
+  /* padding: 50px; */
+  
+}
+
+.show-page {
+  text-align: center;
+  color: white;
+  padding: 50px;
 }
 
 /* ------------------------------- */
