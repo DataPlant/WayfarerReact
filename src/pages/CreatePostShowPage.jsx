@@ -4,7 +4,7 @@ import CityModel from '../models/CityModel'
 import SelectDropdown from '../components/SelectDropdown'
 import styled from 'styled-components'
 
-const Div = styled.div `
+const Div = styled.div`
   background-size:cover;
   background-color:#121212;
 `
@@ -31,7 +31,7 @@ class CreatePostShowPage extends React.Component {
     }
     handleSubmit = e => {
         e.preventDefault();
-        const { title, content, img, cityId} = this.state;
+        const { title, content, img, cityId } = this.state;
         const city = {
             title,
             content,
@@ -49,11 +49,11 @@ class CreatePostShowPage extends React.Component {
     render() {
         return (
             <body>
-                <div className="post-form-wrapper"> 
+                <div className="post-form-wrapper">
                     <form className="post-form" onSubmit={this.handleSubmit}>
-                    <h1 className="title" >Add A Post!</h1>
-                    <p>say something nice or nothing at all!</p>
-                    <br></br>
+                        <h1 className="title" >Add A Post!</h1>
+                        <p>say something nice or nothing at all!</p>
+                        <br></br>
 
                         <div className="input-field">
                             <input className="input" placeholder="Post Title" type='text' name='title' onChange={this.handleInputChange}></input>
@@ -72,7 +72,7 @@ class CreatePostShowPage extends React.Component {
                         <div className="input-field">
                             <select className="input" name='cityId' value={this.state.cityId} onChange={this.handleInputChange}>
                                 <option value='' selected>Select City</option>
-                                <SelectDropdown cities={this.state.cities}/>
+                                <SelectDropdown cities={this.state.cities} />
                             </select>
                             <br></br>
 
