@@ -63,38 +63,38 @@ export default function SimpleSlider() {
   return (
     <Slider {...settings}>
       <Div>
-        <H1>Welcome to Wayfarer</H1>      
-        <P>Time to wander or whatever.</P>  
+        <H1>Welcome to Wayfarer</H1>
+        <P>Time to wander or whatever.</P>
         <Img src="https://images.unsplash.com/photo-1546884680-a1de22e94d50?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="" srcset="" />
       </Div>
-        <Div>
-        <H1>Where you at?</H1>      
-        <P>Tell us about your adventure.</P>  
+      <Div>
+        <H1>Where you at?</H1>
+        <P>Tell us about your adventure.</P>
         <Img src="https://images.unsplash.com/photo-1590757879641-d23ccb04d98d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="" srcset="" />
       </Div>
       <Div>
-        <H1>Welcome to Wayfarer</H1>      
-        <P>Time to wander or whatever.</P>  
+        <H1>Welcome to Wayfarer</H1>
+        <P>Time to wander or whatever.</P>
         <Img src="https://images.unsplash.com/photo-1543964496-d83d90140d97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1" alt="" srcset="" />
       </Div>
       <Div>
-        <H1>Welcome to Wayfarer</H1>      
-        <P>Time to wander or whatever.</P>  
+        <H1>Welcome to Wayfarer</H1>
+        <P>Time to wander or whatever.</P>
         <Img src="https://images.unsplash.com/photo-1537779948435-62e7e105ce9a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="" srcset="" />
       </Div>
       <Div>
-        <H1>Some more text.</H1>      
-        <P>Blah blah blahhhh.</P>  
+        <H1>Some more text.</H1>
+        <P>Blah blah blahhhh.</P>
         <Img src="https://images.unsplash.com/photo-1628894580191-bbc827d5c4f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="here's a scary bridge. boo!" srcset="" />
       </Div>
       <Div>
-        <H1>Welcome to Wayfarer</H1>      
-        <P>Time to wander or whatever.</P>  
+        <H1>Welcome to Wayfarer</H1>
+        <P>Time to wander or whatever.</P>
         <Img src="https://images.unsplash.com/photo-1544946632-b73cacef16ad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="" srcset="" />
       </Div>
       <Div>
-        <H1>Welcome to Wayfarer</H1>      
-        <P>Time to wander or whatever.</P>  
+        <H1>Welcome to Wayfarer</H1>
+        <P>Time to wander or whatever.</P>
         <Img src="https://images.unsplash.com/photo-1544979407-1204ff29f490?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80" alt="" srcset="" />
       </Div>
 
