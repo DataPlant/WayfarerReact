@@ -1,10 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Vidaloka&display=swap');
 
+/* ------------------------------- */
+/* GENERAL */
+/* ------------------------------- */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+h1, h2, h3 {
+  font-family: 'Vidaloka', serif;
+}
+
+h2 {
+  font-family: 'Vidaloka', serif;
 }
 
 ul {
@@ -26,29 +42,19 @@ button {
   cursor: pointer;
 }
 
-p {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+.main-page {
+  background-color: #121212;
 }
 
-h1, h2, h3 {
-  font-family: 'Vidaloka', serif;
-}
-
-h2 {
-  font-family: 'Vidaloka', serif;
-
-}
-
-/* SITEWIDE *********************************************** */
 .container {
   max-width: 1000px;
   margin: 0 auto;
   background-color: #121212;
-
 }
 
-/* HEADER ************************************************* */
+/* ------------------------------- */
+/* HEADER */
+/* ------------------------------- */
 .header {
   padding: 0 30px;
   display: flex;
@@ -67,15 +73,15 @@ h2 {
 .navLink {
   display: block;
   padding: 20px;
-  color:black;
+  color:white;
 }
 
 .navLink:hover {
-  color: gray;
+  color: white;
 }
 
 .navLink:visited {
-  color: black;
+  color: white;
 }
 
 .main-page {
@@ -87,13 +93,17 @@ h2 {
   width: 400px
 }
 
-/* SIDEBAR ************************************************* */
+/* ------------------------------- */
+/* SIDEBAR */
+/* ------------------------------- */
+
 .sidebar {
   width: 240px;
   height:100vh;
   background-color: #121212;
   min-width: 300px;
   font-family: 'Vidaloka', serif;
+  padding:10px
 
 }
 
@@ -115,49 +125,57 @@ h2 {
   background: #121212;
 }
 
-/* category INFO *********************************************** */
-.category-info {
+/* ------------------------------- */
+/* CITIES */
+/* ------------------------------- */
+
+.city-info {
   flex-grow: 1;
   font-family: 'Vidaloka', serif;
   background-color:#121212;
-
 }
 
-.category-detail {
+
+.city-detail {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  margin:10px;
   margin-right:15px;
   margin-left:15px;
-  background-color:white;
+  background-color:#272727;
   box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
   border-radius: 10px;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(107, 52, 52, 0.8) 0%,rgba(0,0,0,.9) 80%);
-
-
 }
 
-.category-content {
+.city-content {
   padding-right: 15px;
-
 }
 
-.category-img {
+.city-img {
   width: 525px;
   max-width: 50%;
   border-radius: 10px;
   mask-image: linear-gradient(rgba(0,130,170,0),rgba(0,130,170,1));
-
 }
 
-/* RECIPES SECTION ******************************************* */
-.recipes-section {
+.show-img {
+  width: 700px;
+  max-width: 50%;
+  border-radius: 10px;
+  mask-image: linear-gradient(rgba(0,130,170,0),rgba(0,130,170,1));
+}
+
+/* ------------------------------- */
+/* POSTS */
+/* ------------------------------- */
+
+
+.posts-section {
   cursor: pointer;
-  padding:10px;
+  padding-left:10px;
   background: #121212;
-  
 }
 
 .add-recipe-button {
@@ -170,7 +188,7 @@ h2 {
   color:white
 }
 
-.recipe {
+.posts {
   padding: 18px;
   display: flex;
   justify-content:space-around;
@@ -182,67 +200,33 @@ h2 {
   border-radius: 10px;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(107, 52, 52, 0.8) 0%,rgba(0,0,0,.9) 80%);
-
 }
 
-.recipe-container {
+.post-container {
   padding: 10px;
 }
 
-.recipe:hover {
+.posts:hover {
   background: #121212;
 }
 
-.recipe-img {
+.post-img {
   width: 150px;
   padding: 10px;
   border-radius: 15px;
   mask-image: linear-gradient(rgba(0,130,170,0),rgba(0,130,170,1));
-
 }
 
-/* RECIPE ADD PAGE ********************************************
-.form {
+.show-post-page {
   margin: 0 auto;
   max-width: 1000px;
   padding: 20px;
 }
 
-.form-header {
-  margin-bottom: 20px;
-}
-
-.form-group {
-  display: flex;
+.post-category-name,
+.post-title,
+.post-body {
   margin-bottom: 10px;
-}
-
-.form-label {
-  width: 100px;
-}
-
-.form-input {
-  width: 100%;
-  border-radius: 3px;
-  border: 2px solid #aaa;
-  padding: 5px;
-}
-
-.form-input-body {
-  height: 200px; */
-/* } */
-/* SHOW RECIPE PAGE **************************************** */
-.show-recipe-page {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 20px;
-}
-
-.recipe-category-name,
-.recipe-title,
-.recipe-body {
-  margin-bottom: 10px;
-
 }
 
 .button, .link-button {
@@ -256,8 +240,12 @@ h2 {
   border: none;
   font-size: 16px;
   left: 50px;
-
 }
+
+/* ------------------------------- */
+/* SIGN UP FORM */
+/* ------------------------------- */
+
 
 .signup-form-wrapper {
   position: absolute;
@@ -265,22 +253,20 @@ h2 {
   left: 58%;
   transform: translate(-50%, -50%);
   width: 600px;
-  height:250px;
+  height:260px;
   display: flex;
   border: none;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
   border-radius: 10px;
-  /* mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(107, 52, 52, 0.8) 0%,rgba(0,0,0,.9) 80%); */
 }
 
 .signup-form {
   width: 60%;
   background-color: white;
   border-radius:  10px ;
+  /* backdrop-filter: blur(8px); */
 }
-
 
 .input-field {
   padding-right: 40px;
@@ -289,22 +275,23 @@ h2 {
 }
 
 .input {
-    font-size: 16px;
-    display: block;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: lighter;
-    width: 100%;
-    padding: 10px;
-    border: 0;
-    border-bottom: 1px solid #747474;
-    outline: none;
-    transition: all .2s;
-    border-radius: 4px;
-    padding-right: 10px;
+  font-size: 16px;
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: lighter;
+  width: 100%;
+  padding: 10px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  transition: all .2s;
+  border-radius: 4px;
+  padding-right: 10px;
 } 
-   focus {
-      border-color: #222;
-    }
+
+focus {
+  border-color: #222;
+  }
 
 
 .form-img {
@@ -325,35 +312,142 @@ h2 {
   letter-spacing: 0.2px;
   outline: 0;
   transition: all .3s;
-  }
+  border-radius: 0px 0px 10px 10px;
+}
 
-  .navLink1 {
-    display: block;
-    padding: 20px;
-    color:white
-  }
+.navLink1 {
+  display: block;
+  padding: 20px;
+  color:white
+}
 
-  .add-post-wrapper {
-    position: relative;
-    height:40px;
-  }
+/* ------------------------------- */
+/* ADD POST */
+/* ------------------------------- */
 
-  .add-post {
+.add-post-wrapper {
+  position: relative;
+  height:40px;
+}
+
+.add-post {
+  position: absolute;
+  border-radius: 50px;
+  width:50px;
+  height:50px;
+  right:10px;
+  top:15px;
+  font-size:20px;
+  border:none
+}
+
+.add-post:hover {
+  background:#747474;
+}
+
+.add-post-text {
+  position: absolute;
+  right:40px;
+  width:110px;
+  top:30px;
+  font-size:15px;
+  font-family: 'Vidaloka', serif;
+}
+
+.post-form-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height:360px;
+  width:500;
+  display: flex;
+  border: none;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  border-radius: 10px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(107, 52, 52, 0.8) 0%,rgba(0,0,0,.9) 80%);
+}
+
+.post-form {
+  width: 400px;
+  background-color:white;
+  border-radius:  10px ;
+}
+
+/* ------------------------------- */
+/* ADD CITY */
+/* ------------------------------- */
+
+.add-city-wrapper {
+  position: absolute;
+  height:40px;
+  left:10px;
+  top:430px;
+}
+
+.add-city:hover {
+  background:#747474;
+}
+
+.add-city {
+  position: absolute;
+  border-radius: 50px;
+  width:50px;
+  height:50px;
+  left:10px;
+  font-size:20px;
+  border:none
+}
+
+.add-city-text {
     position: absolute;
-    border-radius: 50px;
-    width:50px;
-    height:50px;
-    right:10px;
-    top:0;
-    font-size:20px
-  }
-
-  .add-post-text {
-    position: absolute;
-    right:40px;
-    width:110px;
-    top:15px;
+    left:70px;
+    width:200px;
     font-size:15px;
     font-family: 'Vidaloka', serif;
+    top:31px;
+}
 
+  .city-form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height:360px;
+    width:500;
+    display: flex;
+    border: none;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    border-radius: 10px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(107, 52, 52, 0.8) 0%,rgba(0,0,0,.9) 80%);
   }
+
+.new-post-page {
+  background-color: #121212;
+}
+
+/* ------------------------------- */
+/* MISC */
+/* ------------------------------- */
+  
+body {
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('07.jpg');
+	background-size: 130%;
+  font-weight: lighter;
+}
+
+.author {
+  font-weight:bold;
+  text-align:right; 
+}
+.user {
+  font-weight:bold;
+  text-align:left
+}
