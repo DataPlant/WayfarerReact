@@ -2,6 +2,12 @@ import React from 'react'
 import axios from 'axios'
 import CityModel from '../models/CityModel'
 import SelectDropdown from '../components/SelectDropdown'
+import styled from 'styled-components'
+
+const Div = styled.div `
+  background-size:cover;
+  background-color:#121212;
+`
 
 class CreatePostShowPage extends React.Component {
     state = {
@@ -17,7 +23,6 @@ class CreatePostShowPage extends React.Component {
             this.setState({ cities: data });
         });
     }
-
 
     handleInputChange = e => {
         this.setState({
@@ -43,22 +48,39 @@ class CreatePostShowPage extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Create Post Show Page</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <label htmlFor='title'>Title:</label>
-                    <input type='text' name='title' onChange={this.handleInputChange}></input>
-                    <label htmlFor='content'>Content:</label>
-                    <input type='text' name='content' onChange={this.handleInputChange}></input>
-                    <label htmlFor='img'>Image URL:</label>
-                    <input type='text' name='img' onChange={this.handleInputChange}></input>
-                    <select name='cityId' value={this.state.cityId} onChange={this.handleInputChange}>
-                        <option value='' selected>Select</option>
-                        <SelectDropdown cities={this.state.cities}/>
-                    </select>
-                    <button type='submit'>Create</button>
-                </form>
-            </div>
+            <body>
+                <div className="post-form-wrapper"> 
+                    <form className="post-form" onSubmit={this.handleSubmit}>
+                    <h1 className="title" >Create Post Show Page</h1>
+                    <p>say something nice or nothing at all!</p>
+                    <br></br>
+
+                        <div className="input-field">
+                            <input className="input" placeholder="Post Title" type='text' name='title' onChange={this.handleInputChange}></input>
+                        </div>
+                        <br></br>
+
+                        <div className="input-field">
+                            <input className="input" placeholder="Post Content" type='text' name='content' onChange={this.handleInputChange}></input>
+                        </div>
+                        <br></br>
+
+                        <div className="input-field">
+                            <input className="input" placeholder="Image" type='text' name='img' onChange={this.handleInputChange}></input>
+                        </div>
+                        <br></br>
+                        <div className="input-field">
+                            <select className="input" name='cityId' value={this.state.cityId} onChange={this.handleInputChange}>
+                                <option value='' selected>Select City</option>
+                                <SelectDropdown cities={this.state.cities}/>
+                            </select>
+                            <br></br>
+
+                        </div>
+                        <button className="button-sign" type='submit'>Create</button>
+                    </form>
+                </div>
+            </body>
         )
     }
 }
