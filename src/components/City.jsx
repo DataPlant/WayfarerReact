@@ -16,7 +16,8 @@ function City(props) {
                 <h2>{props.city.cityname}</h2>
                 <h3>{props.city.country}</h3>
                 <p className="city-p">
-                    <br></br>
+                    <br />
+                    <p>Welcome back, LuVz2TrAVEL! </p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nulla eros, eleifend id rutrum id, dictum dictum lorem. Aliquam at enim massa. In sollicitudin elit id mi posuere, ut consequat dui accumsan. Morbi sed condimentum urna, non varius ex. Vestibulum vitae pellentesque mauris. Proin accumsan felis id neque pretium, eu hendrerit tellus blandit. Aenean id eros sit amet neque tempus dictum ut vitae leo. Proin accumsan felis id neque pretium, eu hendrerit tellus blandit. Aenean id eros sit amet neque tempus dictum ut.
                 </p>
             </div>
