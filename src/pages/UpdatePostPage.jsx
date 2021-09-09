@@ -23,7 +23,7 @@ class UpdatePost extends React.Component {
     }
     handleSubmit = e => {
         e.preventDefault();
-        const { title, content, img, cityId} = this.state;
+        const { title, content, img, cityId } = this.state;
         const city = {
             title,
             content,
@@ -51,7 +51,7 @@ class UpdatePost extends React.Component {
                     <input type='text' name='img' onChange={this.handleInputChange}></input>
                     <select name='cityId' value={this.state.cityId} onChange={this.handleInputChange}>
                         <option value='' selected>Select</option>
-                        <SelectDropdown cities={this.state.cities}/>
+                        <SelectDropdown cities={this.state.cities} />
                     </select>
                     <button type='submit'>Create</button>
                 </form>
