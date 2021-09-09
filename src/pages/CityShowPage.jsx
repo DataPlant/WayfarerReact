@@ -30,9 +30,9 @@ class CityShowPage extends React.Component {
         const getPosts = this.state.posts.map((post) => {
             return (
                 <div>
-                    <section>
+                    <section className="show-page">
                         <h4>{post.title}</h4>
-                        <img className="city-img" src={post.img}></img>
+                        <img className="show-img" src={post.img}></img>
                         <p>{post.content}</p>
                     </section>
                 </div>
@@ -44,17 +44,19 @@ class CityShowPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="show-page">
                 <h1>{this.state.cityname}</h1>
                 <h4>{this.state.country}</h4>
                 <img
-                    className="show-img"
+                    id="show-img"
                     src={this.state.headerimg}
                     alt="city picture"
                 />
                 <br />
                 <br />
+                
                 <h3><em>Posts about {this.state.cityname}</em></h3>
+                <hr />
                 <br />
                 {this.showPosts()}
             </div>
