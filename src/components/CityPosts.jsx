@@ -3,11 +3,11 @@ import Posts from './Posts'
 function CityPosts(props) {
     let postsJsx = props.city.posts.map((post, idx) => {
         return (
-            <article className="recipe">
-                <img src={post.img} alt="" className="recipe-img" />
-                <div className="recipe-container">
-                    <h4 className="recipe-title">{post.title}</h4>
-                    <p className="recipe-p">{post.content}</p>
+            <article className="posts">
+                <img src={post.img} alt="" className="post-img" />
+                <div className="post-container">
+                    <h4 className="post-title">{post.title}</h4>
+                    <p className="post-p">{post.content}</p>
                     <br></br>
                     <p className="author">Author: LuVz2TrAVEL</p>
                 </div>
@@ -15,7 +15,7 @@ function CityPosts(props) {
         )
     })
     return (
-        <section className="recipes-section">
+        <section className="posts-section">
             {postsJsx}
         </section>
     )
