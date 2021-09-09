@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 class CreateCityShowPage extends React.Component {
     state = {
@@ -22,7 +23,7 @@ class CreateCityShowPage extends React.Component {
         }
         axios
             .post('http://localhost:4000/cities', city)
-            .then(() => console.log('Create Check'))
+            .then(() => window.location.href = "/cities")
             .catch(err => {
                 console.error(err)
             })
@@ -59,7 +60,7 @@ class CreateCityShowPage extends React.Component {
                                 <input className="input" placeholder="Image" type='text' name='headerimg' onChange={this.handleInputChange}></input>
                             </div>
                             <br></br>
-                            <button className="button-sign" type='submit'>Create</button>
+                                <button className="button-sign" type='submit'>Create</button>
                         </form>
                     </div>
                 </body>
