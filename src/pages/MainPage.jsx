@@ -8,12 +8,12 @@ import CityPosts from '../components/CityPosts';
 import Img from '../img/198234-200.png'
 import styled from 'styled-components';
 
-const Button = styled.button `
+const Button = styled.button`
   background-image: url(${Img});
   background-size: 200px;
 `
 
-const H1 = styled.h1 `
+const H1 = styled.h1`
   color:white;
   font-size:20px;
   padding-left:40px;
@@ -23,23 +23,19 @@ const H1 = styled.h1 `
 class MainPage extends React.Component {
 
 
-    state = {
-        cities: [],
-        cityIdx: 0,
-        posts: [],
-    }
+  state = {
+    cities: [],
+    cityIdx: 0,
+    posts: [],
+  }
 
-  
+
 
   updateCityIdx = (idx) => {
-    // Anytime we update state we must call this.setState()
-    // this.setState() will tell the component to rerender.
     this.setState({ cityIdx: idx });
   }
 
   componentDidMount() {
-    console.log('did mount');
-        
     CityModel.all().then((citydata) => {
       this.setState({ cities: citydata })
     })
@@ -49,7 +45,6 @@ class MainPage extends React.Component {
   }
 
   render() {
-
     let cityNames = this.state.cities.map((city) => {
       return city.cityname
     })
@@ -64,14 +59,13 @@ class MainPage extends React.Component {
 
     if (selectedCity) {
 
-     linkJsx = <Link className="navLink" to={`/about/${this.state.cities[this.state.cityIdx]._id}`}>
-        <City city={selectedCity} /> 
+      linkJsx = <Link className="navLink" to={`/about/${this.state.cities[this.state.cityIdx]._id}`}>
+        <City city={selectedCity} />
       </Link>
 
-
-     postJsx = <Link className="navLink" to={`/about/${this.state.cities[this.state.cityIdx]._id}`}>
-     <CityPosts city={selectedCity2} /> 
-   </Link>
+      postJsx = <Link className="navLink" to={`/about/${this.state.cities[this.state.cityIdx]._id}`}>
+        <CityPosts city={selectedCity2} />
+      </Link>
 
     } else {
       linkJsx = ''
@@ -79,38 +73,32 @@ class MainPage extends React.Component {
 
     return (
       <div className="main-page">
-        
         <Sidebar
           cityNames={cityNames}
           updateCityIdx={this.updateCityIdx}
         />
-
         <main className="category-info">
           <div className="add-city-wrapper">
             <Link className="navLink1" to="/cities/new">
-    
               <p className="add-city-text">Add City</p>
               <button className="add-city">+</button></Link>
-            </div>
-            {linkJsx}
-            <div className="add-post-wrapper">
-            <Link className="navLink1" to="/posts/new">
-    
-              <p className="add-post-text">Add Post</p>
-              
-              <Button className="add-post">+</Button></Link>
-            </div>
-            <H1>Read some posts...</H1>
-            {postJsx}
-        </main>
+          </div>
 
+        {linkJsx}
+
+          <div className="add-post-wrapper">
+            <Link className="navLink1" to="/posts/new">
+              <p className="add-post-text">Add Post</p>
+              <Button className="add-post">+</Button></Link>
+          </div>
+          <H1>Read some posts...</H1>
+
+        {postJsx}
+
+        </main>
       </div>
     );
   }
 }
 
 export default MainPage;
-
-  // 2 components:
-  //    Sidebar
-  //    CityDetails
