@@ -46,7 +46,7 @@ class ModalPopup extends Component {
                         <hr />  
                         <div className="signup-form-wrapper">  
                         <Form className="signup-form" method = "POST" action="/">
-
+<br></br>
                     <h1 className="title">sign in</h1>
                         <p>
                             please log in or sign up below!

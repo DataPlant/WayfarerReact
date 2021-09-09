@@ -31,7 +31,7 @@ class CreateCityShowPage extends React.Component {
     render() {
         return (
             <div>
-                <h1>Create Post Show Page</h1>
+                {/* <h1>Create Post Show Page</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label htmlFor='cityname'>Name of the City:</label>
                     <input type='text' name='cityname' onChange={this.handleInputChange}></input>
@@ -40,8 +40,36 @@ class CreateCityShowPage extends React.Component {
                     <label htmlFor='headerimg'>Image URL:</label>
                     <input type='text' name='headerimg' onChange={this.handleInputChange}></input>
                     <button type='submit'>Create</button>
-                </form>
+                </form> */}
+
+                <body>
+                <div className="city-form-wrapper"> 
+                    <form className="post-form" onSubmit={this.handleSubmit}>
+                    <h1 className="title" >Add A City!</h1>
+                    <p>say something nice or nothing at all!</p>
+                    <br></br>
+
+                        <div className="input-field">
+                            <input className="input" placeholder="City Name" type='text' name='cityname' onChange={this.handleInputChange}></input>
+                        </div>
+                        <br></br>
+
+                        <div className="input-field">
+                            <input className="input" placeholder="Country Name" type='text' name='country'  onChange={this.handleInputChange}></input>
+                        </div>
+                        <br></br>
+
+                        <div className="input-field">
+                            <input className="input" placeholder="Image" type='text' name='headerimg' onChange={this.handleInputChange}></input>
+                        </div>
+                        <br></br>
+                        <button className="button-sign" type='submit'>Create</button>
+                    </form>
+                </div>
+            </body>
+
             </div>
+            
         )
     }
 }

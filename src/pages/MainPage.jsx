@@ -1,21 +1,28 @@
 import React from 'react'
-import CityListPage from './CityListPage';
-import CityShowPage from './CityShowPage';
 import CityModel from '../models/CityModel';
 import PostModel from '../models/PostModel'
 import Sidebar from '../components/mainPageComponents/Sidebar';
 import City from '../components/City';
 import { Link } from 'react-router-dom';
 import CityPosts from '../components/CityPosts';
+import Img from '../img/198234-200.png'
+import styled from 'styled-components';
 
+const Button = styled.button `
+  background-image: url(${Img});
+  background-size: 200px;
+`
 
 class MainPage extends React.Component {
+
 
     state = {
         cities: [],
         cityIdx: 0,
         posts: [],
     }
+
+  
 
   updateCityIdx = (idx) => {
     // Anytime we update state we must call this.setState()
@@ -65,19 +72,26 @@ class MainPage extends React.Component {
 
     return (
       <div className="main-page">
+        
         <Sidebar
           cityNames={cityNames}
           updateCityIdx={this.updateCityIdx}
         />
-        
+
         <main className="category-info">
+          <div className="add-city-wrapper">
+            <Link className="navLink1" to="/cities/new">
+    
+              <p className="add-city-text">Add City</p>
+              <button className="add-city">+</button></Link>
+            </div>
             {linkJsx}
             <div className="add-post-wrapper">
             <Link className="navLink1" to="/posts/new">
     
               <p className="add-post-text">Add Post</p>
               
-              <button className="add-post">+</button></Link>
+              <Button className="add-post">+</Button></Link>
             </div>
             {postJsx}
         </main>
