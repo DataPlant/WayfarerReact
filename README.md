@@ -8,7 +8,6 @@ Project Wayfarer is a city blog site that allows users to
 -  [Planned Features](#Unfinished-Features)
 -  [Technologies Used](#Technologies-Used)
 -  [Challenges](#Challenges)
--  [Lessons Learned](#Lessons-Learned)
 -  [Wireframes](#Wireframes)
 -  [Screenshots](#Screenshots)
 
@@ -24,7 +23,6 @@ Project Wayfarer is a city blog site that allows users to
     - Delete feature
 - [City page](#Citypage)
     - City images
-    - More information on the city
 
 ## Unfinished Features
 - User functionality through Express Sessions
@@ -32,7 +30,8 @@ Project Wayfarer is a city blog site that allows users to
     - User blog creation
 - Adjust CSS for multiple screen sizes
 
-## Technologies Used For Front-end
+## Technologies Used
+### For Front-end
 [Details](#Details)
 - React
 - HTML
@@ -41,7 +40,7 @@ Project Wayfarer is a city blog site that allows users to
 - MVC 
 - Git/Github
 
-## Technologies Used For Back-end
+### For Back-end
 [Details](#Details)
 - Express
 - Mongoose
@@ -60,15 +59,14 @@ Project Wayfarer is a city blog site that allows users to
 ![](/resources/DiagramWireframe2.png)
 
 ## Screenshots
-
 ### Homepage
-screenshot of the homepage
-
+![](/resources/Homepage.png)
 ### Citylist (User Index)
-screenshot of the city list page
-
-### City Details
-screenshot of the city page
+![](/resources/CityListPage.png)
+### City Page
+![](/resources/CityPage.png)
+# Posts
+![](/resources/CityPagePosts.png)
 
 ## Details
 ### Frontend-Details
