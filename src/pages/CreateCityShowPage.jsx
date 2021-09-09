@@ -59,6 +59,12 @@ class CreateCityShowPage extends React.Component {
                         </div>
                         <br></br>
 
+
+                        <div className="input-field">
+                            <input className="input" placeholder="Content" type='text' name='content' onChange={this.handleInputChange}></input>
+                        </div>
+                        <br></br>
+
                         <div className="input-field">
                             <input className="input" placeholder="Image" type='text' name='headerimg' onChange={this.handleInputChange}></input>
                         </div>
