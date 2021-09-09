@@ -51,7 +51,7 @@ class CreatePostShowPage extends React.Component {
             <body>
                 <div className="post-form-wrapper"> 
                     <form className="post-form" onSubmit={this.handleSubmit}>
-                    <h1 className="title" >Create Post Show Page</h1>
+                    <h1 className="title" >Add A Post!</h1>
                     <p>say something nice or nothing at all!</p>
                     <br></br>
 
