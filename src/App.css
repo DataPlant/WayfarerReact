@@ -206,37 +206,6 @@ h2 {
 
 }
 
-/* RECIPE ADD PAGE ********************************************
-.form {
-  margin: 0 auto;
-  max-width: 1000px;
-  padding: 20px;
-}
-
-.form-header {
-  margin-bottom: 20px;
-}
-
-.form-group {
-  display: flex;
-  margin-bottom: 10px;
-}
-
-.form-label {
-  width: 100px;
-}
-
-.form-input {
-  width: 100%;
-  border-radius: 3px;
-  border: 2px solid #aaa;
-  padding: 5px;
-}
-
-.form-input-body {
-  height: 200px; */
-/* } */
-/* SHOW RECIPE PAGE **************************************** */
 .show-recipe-page {
   margin: 0 auto;
   max-width: 1000px;
@@ -270,7 +239,7 @@ h2 {
   left: 58%;
   transform: translate(-50%, -50%);
   width: 600px;
-  height:250px;
+  height:260px;
   display: flex;
   border: none;
   text-align: center;
@@ -330,6 +299,7 @@ h2 {
   letter-spacing: 0.2px;
   outline: 0;
   transition: all .3s;
+  border-radius: 0px 0px 10px 10px;
   }
 
   .navLink1 {
@@ -368,6 +338,7 @@ h2 {
     height:40px;
     left:0;
     top:430px;
+    
   }
 
   .add-city {
@@ -388,3 +359,57 @@ h2 {
     top:31px;
 
   }
+
+
+  .post-form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height:360px;
+    width:500;
+    display: flex;
+    border: none;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    border-radius: 10px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(107, 52, 52, 0.8) 0%,rgba(0,0,0,.9) 80%);
+  }
+
+  .city-form-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height:300px;
+    width:500;
+    display: flex;
+    border: none;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    border-radius: 10px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(107, 52, 52, 0.8) 0%,rgba(0,0,0,.9) 80%);
+  }
+  
+  
+  .post-form {
+    width: 400px;
+    background-color:white;
+    border-radius:  10px ;
+  }
+
+  .new-post-page {
+    background-color: #121212;
+ 
+  }
+  
+  body {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('07.jpg');
+	  background-size: 130%;
+    font-weight: lighter;
+}
