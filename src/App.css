@@ -433,3 +433,7 @@ focus {
   font-weight:bold;
   text-align:right; 
 }
+.user {
+  font-weight:bold;
+  text-align:left
+}
