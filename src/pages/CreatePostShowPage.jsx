@@ -40,7 +40,7 @@ class CreatePostShowPage extends React.Component {
         }
         axios
             .post('http://localhost:4000/post', city)
-            .then(() => console.log('Create Check'))
+            .then(() => window.location.href = "/cities")
             .catch(err => {
                 console.error(err)
             })
