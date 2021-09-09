@@ -72,15 +72,15 @@ h2 {
 .navLink {
   display: block;
   padding: 20px;
-  color:black;
+  color:white;
 }
 
 .navLink:hover {
-  color: gray;
+  color: white;
 }
 
 .navLink:visited {
-  color: black;
+  color: white;
 }
 
 .main-page {
@@ -99,6 +99,7 @@ h2 {
   background-color: #121212;
   min-width: 300px;
   font-family: 'Vidaloka', serif;
+  padding:10px
 
 }
 
@@ -125,24 +126,25 @@ h2 {
   flex-grow: 1;
   font-family: 'Vidaloka', serif;
   background-color:#121212;
-
 }
+
 
 .category-detail {
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  margin:10px;
   margin-right:15px;
   margin-left:15px;
-  background-color:white;
+  background-color:#272727;
   box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
   border-radius: 10px;
   mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0, 0, 0, 0.434) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(107, 52, 52, 0.8) 0%,rgba(0,0,0,.9) 80%);
-
-
 }
+
+/* .category-detail:hover {
+  background-color:#121212;
+} */
 
 .category-content {
   padding-right: 15px;
@@ -167,7 +169,7 @@ h2 {
 /* RECIPES SECTION ******************************************* */
 .recipes-section {
   cursor: pointer;
-  padding:10px;
+  padding-left:10px;
   background: #121212;
   
 }
@@ -326,15 +328,20 @@ h2 {
     width:50px;
     height:50px;
     right:10px;
-    top:0;
-    font-size:20px
+    top:15px;
+    font-size:20px;
+    border:none
+  }
+
+  .add-post:hover {
+    background:#747474;
   }
 
   .add-post-text {
     position: absolute;
     right:40px;
     width:110px;
-    top:15px;
+    top:30px;
     font-size:15px;
     font-family: 'Vidaloka', serif;
 
@@ -343,9 +350,13 @@ h2 {
   .add-city-wrapper {
     position: absolute;
     height:40px;
-    left:0;
+    left:10px;
     top:430px;
     
+  }
+
+  .add-city:hover {
+    background:#747474;
   }
 
   .add-city {
@@ -354,7 +365,8 @@ h2 {
     width:50px;
     height:50px;
     left:10px;
-    font-size:20px
+    font-size:20px;
+    border:none
   }
 
   .add-city-text {
