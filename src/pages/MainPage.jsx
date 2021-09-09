@@ -13,6 +13,13 @@ const Button = styled.button `
   background-size: 200px;
 `
 
+const H1 = styled.h1 `
+  color:white;
+  font-size:20px;
+  padding-left:40px;
+  padding-bottom:20;
+`
+
 class MainPage extends React.Component {
 
 
@@ -93,6 +100,7 @@ class MainPage extends React.Component {
               
               <Button className="add-post">+</Button></Link>
             </div>
+            <H1>Read some posts...</H1>
             {postJsx}
         </main>
 
