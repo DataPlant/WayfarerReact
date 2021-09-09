@@ -151,6 +151,13 @@ h2 {
   mask-image: linear-gradient(rgba(0,130,170,0),rgba(0,130,170,1));
 
 }
+.show-img {
+  width: 700px;
+  max-width: 50%;
+  border-radius: 10px;
+  mask-image: linear-gradient(rgba(0,130,170,0),rgba(0,130,170,1));
+
+}
 
 /* RECIPES SECTION ******************************************* */
 .recipes-section {
