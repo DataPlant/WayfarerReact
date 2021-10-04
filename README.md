@@ -49,24 +49,12 @@ Project Wayfarer is a city blog site that allows users to
 - REST
 - Git/Github
 
-## Challenges
-
-
-## Wireframes
-
-![](/resources/DiagramWireframe.png)
-
-![](/resources/DiagramWireframe2.png)
 
 ## Screenshots
 ### Homepage
 ![](/resources/Homepage.png)
 ### Citylist (User Index)
 ![](/resources/CityListPage.png)
-### City Page
-![](/resources/CityPage.png)
-# Posts
-![](/resources/CityPagePosts.png)
 
 ## Details
 ### Frontend-Details
