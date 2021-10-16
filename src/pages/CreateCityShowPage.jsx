@@ -21,7 +21,7 @@ class CreateCityShowPage extends React.Component {
             headerimg,
         }
         axios
-            .post('https://wayfarer-satya.herokuapp.com/cities', city)
+            .post('http://localhost:4000/cities', city)
             .then(() => window.location.href = "/cities")
             .catch(err => {
                 console.error(err)

@@ -1,5 +1,5 @@
-
 const url = 'https://wayfarer-satya.herokuapp.com/posts'
+
 class PostModel {
     static all() {
         return fetch(url)
