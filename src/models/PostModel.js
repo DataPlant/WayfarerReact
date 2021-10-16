@@ -1,5 +1,5 @@
 
-const url = 'http://localhost:4000/posts'
+const url = 'https://wayfarer-satya.herokuapp.com/posts'
 class PostModel {
     static all() {
         return fetch(url)
