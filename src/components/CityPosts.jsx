@@ -9,7 +9,7 @@ function CityPosts(props) {
                     <h4 className="post-title">{post.title}</h4>
                     <p className="post-p">{post.content}</p>
                     <br></br>
-                    <p className="author">Author: LuVz2TrAVEL</p>
+                    {/* <p className="author">Author: LuVz2TrAVEL</p> */}
                 </div>
             </article>
         )
