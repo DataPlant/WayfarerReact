@@ -71,7 +71,7 @@ export default function SimpleSlider() {
     <Slider {...settings}>
       <Div>
         <H1>Welcome to Wayfarer</H1>
-        <P>Time to wander or whatever.</P>
+        <P>Your travel log! Navigate to the cities page and add some posts and cities of your own. Enjoy!</P>
         <Img src= {slide6} alt="" srcset="" />
       </Div>
       <Div>
