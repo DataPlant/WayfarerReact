@@ -1,6 +1,13 @@
 import React from "react";
 import Slider from "react-slick";
 import styled from 'styled-components'
+import slide1 from'../../img/slide1.jpeg'
+import slide2 from'../../img/slide2.jpeg'
+import slide3 from'../../img/slide3.jpeg'
+import slide4 from'../../img/slide4.jpeg'
+import slide6 from'../../img/slide6.jpeg'
+
+
 
 
 export default function SimpleSlider() {
@@ -64,40 +71,29 @@ export default function SimpleSlider() {
     <Slider {...settings}>
       <Div>
         <H1>Welcome to Wayfarer</H1>
-        <P>Time to wander or whatever.</P>
-        <Img src="https://images.unsplash.com/photo-1546884680-a1de22e94d50?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="" srcset="" />
+        <P>Your travel log! Navigate to the cities page and add some posts and cities of your own. Enjoy!</P>
+        <Img src= {slide6} alt="" srcset="" />
       </Div>
       <Div>
         <H1>Where you at?</H1>
         <P>Tell us about your adventure.</P>
-        <Img src="https://images.unsplash.com/photo-1590757879641-d23ccb04d98d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="" srcset="" />
+        <Img src= {slide4} alt="" srcset="" />
       </Div>
       <Div>
         <H1>Welcome to Wayfarer</H1>
         <P>Time to wander or whatever.</P>
-        <Img src="https://images.unsplash.com/photo-1543964496-d83d90140d97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1" alt="" srcset="" />
+        <Img src= {slide3} alt="" srcset="" />
       </Div>
       <Div>
         <H1>Welcome to Wayfarer</H1>
         <P>Time to wander or whatever.</P>
-        <Img src="https://images.unsplash.com/photo-1537779948435-62e7e105ce9a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="" srcset="" />
+        <Img src= {slide2} alt="" srcset="" />
       </Div>
       <Div>
         <H1>Some more text.</H1>
         <P>Blah blah blahhhh.</P>
-        <Img src="https://images.unsplash.com/photo-1628894580191-bbc827d5c4f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="here's a scary bridge. boo!" srcset="" />
+        <Img src= {slide1} alt="" srcset="" />
       </Div>
-      <Div>
-        <H1>Welcome to Wayfarer</H1>
-        <P>Time to wander or whatever.</P>
-        <Img src="https://images.unsplash.com/photo-1544946632-b73cacef16ad?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8" alt="" srcset="" />
-      </Div>
-      <Div>
-        <H1>Welcome to Wayfarer</H1>
-        <P>Time to wander or whatever.</P>
-        <Img src="https://images.unsplash.com/photo-1544979407-1204ff29f490?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80" alt="" srcset="" />
-      </Div>
-
     </Slider>
   );
 }

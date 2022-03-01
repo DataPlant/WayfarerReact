@@ -23,20 +23,19 @@ function Section() {
             <Div>
                 <h1>Mindset.</h1>
                 <p>
-                    Nulla eget dapibus risus. Pellentesque ut mi at enim condimentum tincidunt nec in elit. Integer ultrices diam a malesuada cursus. Maecenas id vulputate leo. Proin auctor egestas porttitor. Phasellus non arcu varius, rutrum erat sed, semper dui.
+                    Nulla eget dapibus risus. Pellentesque ut mi at enim condimentum tincidunt nec in elit. Integer ultrices diam a malesuada cursus. 
                 </p>
             </Div>
             <Div>
                 <h1>Lifestyle.</h1>
                 <p>
-                    Nulla eget dapibus risus. Pellentesque ut mi at enim condimentum tincidunt nec in elit. Integer ultrices diam a malesuada cursus. Maecenas id vulputate leo. Proin auctor egestas porttitor. Phasellus non arcu varius, rutrum erat sed, semper dui. Aenean est dolor,
+                    Nulla eget dapibus risus. Pellentesque ut mi at enim condimentum tincidunt nec in elit. Integer ultrices diam a malesuada cursus. 
                 </p>
             </Div>
             <Div>
                 <h1>Motivator.</h1>
                 <p>
-                    Nulla eget dapibus risus. Pellentesque ut mi at enim condimentum tincidunt nec in elit. Integer ultrices diam a malesuada cursus. Maecenas id vulputate leo. Proin auctor egestas porttitor. Phasellus non arcu varius, rutrum erat sed, semper dui. Aenean est dolor,
-
+                    Nulla eget dapibus risus. Pellentesque ut mi at enim condimentum tincidunt nec in elit. Integer ultrices diam a malesuada cursus. 
                 </p>
             </Div>
         </Container>

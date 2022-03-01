@@ -1,4 +1,4 @@
-const url = 'http://localhost:4000/cities'
+const url = 'https://wayfarer-satya.herokuapp.com/cities'
 
 class CityModel {
    static all() {
