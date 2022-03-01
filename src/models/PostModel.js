@@ -1,4 +1,4 @@
-const url = 'https://wayfarer-satya.herokuapp.com/posts'
+const url = 'https://restackedwayfarer.herokuapp.com/posts'
 
 class PostModel {
     static all() {
