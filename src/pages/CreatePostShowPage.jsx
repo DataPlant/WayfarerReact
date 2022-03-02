@@ -39,7 +39,7 @@ class CreatePostShowPage extends React.Component {
             cityId,
         }
         axios
-            .post('https://dk-wayfarer.herokuapp.com/post', city)
+            .post('https://wayfarerbackend.herokuapp.com/post', city)
             .then(() => window.location.href = "/cities")
             .catch(err => {
                 console.error(err)
