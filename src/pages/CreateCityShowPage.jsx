@@ -5,7 +5,8 @@ class CreateCityShowPage extends React.Component {
     state = {
         cityname: '',
         country: '',
-        headerimg: '',
+        content: '',
+        headerimg: ''
     }
     handleInputChange = e => {
         this.setState({
@@ -14,11 +15,12 @@ class CreateCityShowPage extends React.Component {
     }
     handleSubmit = e => {
         e.preventDefault();
-        const { cityname, country, headerimg } = this.state;
+        const { cityname, country, content, headerimg } = this.state;
         const city = {
             cityname,
             country,
-            headerimg,
+            content,
+            headerimg
         }
         axios
             .post('https://wayfarerbackend.herokuapp.com/cities', city)
